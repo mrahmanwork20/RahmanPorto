@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Company Profile - Muhammad Rahman</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <h1 class="fade-in">Muhammad Rahman</h1>
+    <p class="fade-in delay1">Lulusan Informatika | Teknologi Informasi | Software Development</p>
+    <p class="fade-in delay2">
+      <a href="mailto:mrahman.work20@gmail.com">mrahman.work20@gmail.com</a> | 
+      <a href="https://www.linkedin.com/in/muhammad-rahman-4ba16321a/" target="_blank">LinkedIn</a>
+    </p>
+  </header>
+
+  <nav>
+    <a href="#about">Tentang</a>
+    <a href="#education">Pendidikan</a>
+    <a href="#experience">Pengalaman</a>
+    <a href="#skills">Skill</a>
+  </nav>
+
+  <section id="about" class="fade-in">
+    <h2>Tentang Saya</h2>
+    <div class="card">
+      <p>Saya adalah lulusan Universitas Teknokrat Indonesia jurusan Informatika, dengan minat kuat dalam Teknologi Informasi. 
+      Berpengalaman sebagai Magang Programmer di Nusameta, khususnya dalam QA Testing, dengan kemampuan pemecahan masalah 
+      dan pengembangan perangkat lunak. Tujuan saya adalah menciptakan solusi IT yang efisien, handal, dan user-oriented.</p>
+    </div>
+  </section>
+
+  <section id="education" class="fade-in">
+    <h2>Pendidikan</h2>
+    <div class="card">
+      <h3>Universitas Teknokrat Indonesia</h3>
+      <p><strong>Informatika</strong> | Sep 2021 – Mei 2025</p>
+      <p>IPK: 3.72/4.00</p>
+      <ul>
+        <li>Wakil Ketua Himpunan Mahasiswa Informatika</li>
+        <li>Wakil Ketua Pusat Unggulan Metaverse (JuaraMeta)</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="experience" class="fade-in">
+    <h2>Pengalaman</h2>
+    <div class="card">
+      <h3>Nusameta (PT Metaverse Indonesia Makmur)</h3>
+      <p><em>Programmer Intern – QA Testing | Des 2024 – Apr 2025</em></p>
+      <p>Mengujikan fitur Nodes Visual Script, identifikasi bug, serta dokumentasi isu untuk mendukung tim pengembang.</p>
+    </div>
+    <div class="card">
+      <h3>Kampus Mengajar – SD Muhammadiyah 3 Panjang</h3>
+      <p><em>Feb – Jun 2024</em></p>
+      <p>Membantu sekolah mengembangkan platform media sosial, membuat konten, dan memfasilitasi pembelajaran interaktif.</p>
+    </div>
+  </section>
+
+  <section id="skills" class="fade-in">
+    <h2>Skill & Sertifikasi</h2>
+    <div class="card skills">
+      <span>Unity</span>
+      <span>C#</span>
+      <span>Python</span>
+      <span>PHP</span>
+      <span>Kotlin</span>
+      <span>HTML/CSS</span>
+      <span>Networking</span>
+      <span>AR/VR Development</span>
+      <span>AI Basics</span>
+      <span>Web Development</span>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 Muhammad Rahman | Dibuat dengan HTML & CSS</p>
+  </footer>
+
+  <script>
+    // Efek animasi muncul saat scroll
+    const faders = document.querySelectorAll('.fade-in');
+    const appearOptions = { threshold: 0.2 };
+
+    const appearOnScroll = new IntersectionObserver(function(entries, observer) {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) return;
+        entry.target.classList.add('appear');
+        observer.unobserve(entry.target);
+      });
+    }, appearOptions);
+
+    faders.forEach(fader => {
+      appearOnScroll.observe(fader);
+    });
+  </script>
+
+</body>
+</html>
